@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var a=30;
+        function show()
+        {
+            var b="   b is outer funtion variable    ";
+            document.write(b);
+            function innerfunction(){
+               var c="      c is inner function variable";
+               document.write(c);
+               document.write(b);
+
+               document.write(a);
+               
+            }
+            innerfunction();
+            document.write(c);
+        }
+
+    show();
+
+    </script>
+</body>
+</html>
