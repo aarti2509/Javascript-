@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //simple callback function
+
+        function show(){
+            document.write(" welcome to sqr infotech in show function**");
+        }
+
+        function play(callback)
+        {
+            callback()
+            document.write("  play function");
+        }
+        play(show);
+         
+
+        //callback with argument
+       function display(a)
+        {
+            document.write("  ****from show fun statement"+a);
+
+        }
+
+        function geeky(callback){
+            var a=10;
+            callback(a);
+            document.write("  geeky function")
+        }
+
+        geeky(display);
+
+       //reduce callback function
+        document.write(" ****** reduced callback function");
+
+        function display1(b)
+        {
+            document.write(" value of b "+b);
+        }
+        function geeky1(b,callback)
+        {
+            callback(b);
+        }
+
+        geeky1(101,display1);
+
+        //direct write function where we invoke another fun
+
+       
+
+        function geeky2(callback){
+            var c=30;
+            callback(c);
+            document.write(" geeky2 fun");
+        }
+
+        geeky2( function display2(c){
+            document.write("  ***** display2 fun "+c);
+
+        })
+
+       //using without name function
+       function geeky3(callback){
+            var d=90;
+            callback(d);
+            document.write("using without name function");
+
+        };
+
+        geeky3( function(d) {
+            document.write("  ************ display3 fun "+d);
+
+        });
+
+         //using anonomous function
+       function geeky3(callback){
+            var e=300;
+            callback(e);
+            document.write("   using anonomous  function");
+
+        };
+
+        geeky3(e =>document.write("  ************ from anonomous fun  e value is "+e));
+
+    
+
+
+
+        //
+
+     
+
+
+
+
+
+    </script>
+</body>
+</html>
